@@ -5,3 +5,5 @@ so you’re not “rediscovering” known sites. as part of the data vector of k
 
 chmod 600 ~/.kaggle/kaggle.json did this?
 
+
+chmod 600 .netrc
