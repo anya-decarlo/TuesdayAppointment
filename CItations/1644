@@ -1,0 +1,10 @@
+@misc{https://doi.org/10.3334/ornldaac/1644,
+  doi = {10.3334/ORNLDAAC/1644},
+  url = {https://daac.ornl.gov/cgi-bin/dsviewer.pl?ds_id=1644},
+  author = {dos-Santos, M.N. and Keller, M.M. and Morton, D.C.},
+  keywords = {LAND SURFACE &gt; TOPOGRAPHY &gt; TERRAIN ELEVATION &gt; DIGITAL ELEVATION/TERRAIN MODEL (DEM), SPECTRAL/ENGINEERING &gt; LIDAR, BIOSPHERE &gt; VEGETATION &gt; FOREST COMPOSITION/VEGETATION STRUCTURE, BIOSPHERE &gt; VEGETATION &gt; CANOPY CHARACTERISTICS, AIRCRAFT &gt; LIDAR, biomass, vegetation, canopy, height, elevation, point, cloud, carbon, monitoring, system, ranging, detection, light, LiDAR},
+  language = {en},
+  title = {LiDAR Surveys over Selected Forest Research Sites, Brazilian Amazon, 2008-2018},
+  publisher = {ORNL Distributed Active Archive Center},
+  year = {2019}
+}
