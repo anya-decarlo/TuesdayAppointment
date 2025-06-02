@@ -1,0 +1,13 @@
+{
+"type": "FeatureCollection",
+"name": "river_segments_with_lidar",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:EPSG::32722" } },
+"features": [
+{ "type": "Feature", "properties": { "segment_id": 0, "lat": -11.129473547470385, "lon": -53.448140208115198, "lidar_file_paths": null }, "geometry": { "type": "LineString", "coordinates": [ [ 232288.014565532503184, 8768208.493950532749295 ], [ 232906.651810299605131, 8768994.170703012496233 ] ] } },
+{ "type": "Feature", "properties": { "segment_id": 1, "lat": -11.122420514665603, "lon": -53.442420841028344, "lidar_file_paths": null }, "geometry": { "type": "LineString", "coordinates": [ [ 232906.651810299605131, 8768994.170703012496233 ], [ 233525.289055067347363, 8769779.847455492243171 ] ] } },
+{ "type": "Feature", "properties": { "segment_id": 2, "lat": -11.115367311710594, "lon": -53.436701762671191, "lidar_file_paths": null }, "geometry": { "type": "LineString", "coordinates": [ [ 233525.289055067347363, 8769779.847455492243171 ], [ 234143.926299834332895, 8770565.524207971990108 ] ] } },
+{ "type": "Feature", "properties": { "segment_id": 3, "lat": -11.108313938818263, "lon": -53.430982972826982, "lidar_file_paths": null }, "geometry": { "type": "LineString", "coordinates": [ [ 234143.926299834332895, 8770565.524207971990108 ], [ 234762.563544601085596, 8771351.200960451737046 ] ] } },
+{ "type": "Feature", "properties": { "segment_id": 4, "lat": -11.101260396201345, "lon": -53.425264471278958, "lidar_file_paths": null }, "geometry": { "type": "LineString", "coordinates": [ [ 234762.563544601085596, 8771351.200960451737046 ], [ 235381.200789368711412, 8772136.877712929621339 ] ] } },
+{ "type": "Feature", "properties": { "segment_id": 5, "lat": -11.096866781935157, "lon": -53.421702662100152, "lidar_file_paths": null }, "geometry": { "type": "LineString", "coordinates": [ [ 235381.200789368711412, 8772136.877712929621339 ], [ 235533.240227400558069, 8772329.96963058039546 ] ] } }
+]
+}

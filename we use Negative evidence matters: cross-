@@ -1,2 +1,21 @@
 we use Negative evidence matters: cross-check against published geoglyph databases and academic reports
 so you’re not “rediscovering” known sites. as part of the data vector of known paths
+
+
+
+
+So, what should we do instead of immediately expanding the LiDAR data?
+
+Let's go back to the idea of a "Core Study Area" based on the LiDAR data you currently possess:
+
+Identify the Core Area from Your Plot:
+Look at the debug_spatial_join_preview.png plot again. The cluster of red LiDAR boxes represents the area where you have high-resolution elevation data. This is your prime candidate for a core study area.
+Estimate the geographic coordinates (Easting/Northing in EPSG:32722) that roughly bound this cluster of red boxes.
+Refine Your River Definition for this Core Area:
+Modify your define_river_corridor.py script.
+Instead of the current long LineString([(-53.5, -11.5), (-52.9, -10.9)]), define a much shorter LineString whose latitude/longitude coordinates correspond to the small section of the river that you expect to pass through or very near your existing LiDAR cluster.
+When you re-run define_river_corridor.py, it will produce new river_segments.geojson and river_corridor_5km.geojson files that are focused only on this smaller, LiDAR-covered area.
+Re-run match_lidar_to_segments.py:
+With the new, smaller river segments and your existing LiDAR files, you should now see some matches! The plot will also look much more focused, with the river segments and LiDAR tiles clearly in the same small area.
+Proceed with IPHAN and Sentinel-2 for the Core Area:
+Once you have successful LiDAR-segment matching for this core area, you can then focus on integrating the IPHAN archaeological site data (reprojecting it and finding sites within this core area) and acquiring/processing Sentinel-2 imagery for the same limited extent.

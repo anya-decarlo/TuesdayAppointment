@@ -1,0 +1,57 @@
+🛰️ 1. LiDAR Data Sources
+
+a. Sustainable Landscapes Brazil Project
+	•	DOI: 10.3334/ORNLDAAC/1644
+	•	Description: Provides LiDAR point cloud data collected over selected forest research sites across the Amazon rainforest in Brazil between 2008 and 2018. The data are provided in 1 km² tiles and have been georeferenced, noise-filtered, and corrected for misalignment of overlapping flight lines.
+	•	Usage: Utilize the cms_brazil_lidar_tile_inventory.kmz file to inspect tile coverage in Google Earth and identify tiles aligning with your Rio Xingu corridor.
+
+b. LiDAR and DTM Data from Forested Land Near Manaus
+	•	DOI: 10.3334/ORNLDAAC/1515
+	•	Description: Offers LiDAR point clouds and digital terrain models (DTM) from surveys over forested areas near Manaus, Amazonas, Brazil, collected in 2008.
+	•	Usage: While not directly over Rio Xingu, this dataset can provide supplementary data for comparative analysis or model training.
+
+⸻
+
+🗺️ 2. Archaeological Site Data
+
+a. Cadastro Nacional de Sítios Arqueológicos (CNSA) - IPHAN
+	•	Source: IPHAN Geoportal
+	•	Description: Provides georeferenced data on over 17,500 registered archaeological sites in Brazil, including site coordinates, types, and cultural affiliations.
+	•	Usage: Use this shapefile to anchor known site types (e.g., Ceremonial_Site, Residential_Cluster) in your HMM. Intersect the IPHAN site locations with your LiDAR-derived segments to label known states.
+
+⸻
+
+🌿 3. Supplementary Remote Sensing Data
+
+a. Sentinel-2 Satellite Imagery
+	•	Source: Copernicus Open Access Hub
+	•	Description: Provides high-resolution optical imagery useful for calculating vegetation indices like NDVI.
+	•	Usage: Derive vegetation indices to include in your observation vectors, aiding in distinguishing anthropogenic features from natural vegetation.
+
+b. MODIS Net Radiation and Albedo Data
+	•	Source: ORNL DAAC
+	•	Description: Offers data on net radiation and albedo for the Xingu River Basin from 2000 to 2012.
+	•	Usage: Incorporate these variables to understand energy balance dynamics, which may correlate with land use changes indicative of archaeological sites.
+
+⸻
+
+🔄 4. Integrating Data into HMM
+	1.	Define Observation Vectors (o_t):
+	•	For each 1 km² segment along the river corridor, extract features such as:
+	•	Terrain elevation and roughness from LiDAR data.
+	•	Vegetation indices (e.g., NDVI) from Sentinel-2 imagery.
+	•	Proximity to water bodies.
+	2.	Label Known States (q_t):
+	•	Use the IPHAN shapefile to assign known site types to segments where archaeological sites are registered.
+	3.	Train HMM:
+	•	Utilize the sequences of observation vectors and known states to train your HMM, estimating transition and emission probabilities.
+	4.	Predict Unknown States:
+	•	Apply the trained HMM to segments without known site labels to predict the likelihood of various site types.
+
+⸻
+
+🧰 5. Tools and Libraries
+	•	Geospatial Processing: geopandas, shapely, rasterio
+	•	LiDAR Data Handling: laspy, PDAL
+	•	Remote Sensing Analysis: sentinelsat, numpy, scikit-image
+	•	HMM Implementation: hmmlearn, pomegranate

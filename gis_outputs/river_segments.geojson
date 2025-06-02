@@ -1,0 +1,13 @@
+{
+"type": "FeatureCollection",
+"name": "river_segments",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "segment_id": 0, "lat": -11.129473547470385, "lon": -53.448140208115198 }, "geometry": { "type": "LineString", "coordinates": [ [ -53.451, -11.133 ], [ -53.445280488467013, -11.125947052350071 ] ] } },
+{ "type": "Feature", "properties": { "segment_id": 1, "lat": -11.122420514665603, "lon": -53.442420841028344 }, "geometry": { "type": "LineString", "coordinates": [ [ -53.445280488467013, -11.125947052350071 ], [ -53.439561265772099, -11.118893934443568 ] ] } },
+{ "type": "Feature", "properties": { "segment_id": 2, "lat": -11.115367311710594, "lon": -53.436701762671191 }, "geometry": { "type": "LineString", "coordinates": [ [ -53.439561265772099, -11.118893934443568 ], [ -53.433842331698514, -11.111840646493297 ] ] } },
+{ "type": "Feature", "properties": { "segment_id": 3, "lat": -11.108313938818263, "lon": -53.430982972826982 }, "geometry": { "type": "LineString", "coordinates": [ [ -53.433842331698514, -11.111840646493297 ], [ -53.428123686029494, -11.104787188712068 ] ] } },
+{ "type": "Feature", "properties": { "segment_id": 4, "lat": -11.101260396201345, "lon": -53.425264471278958 }, "geometry": { "type": "LineString", "coordinates": [ [ -53.428123686029494, -11.104787188712068 ], [ -53.422405328548287, -11.097733561312682 ] ] } },
+{ "type": "Feature", "properties": { "segment_id": 5, "lat": -11.096866781935157, "lon": -53.421702662100152 }, "geometry": { "type": "LineString", "coordinates": [ [ -53.422405328548287, -11.097733561312682 ], [ -53.421, -11.096 ] ] } }
+]
+}
