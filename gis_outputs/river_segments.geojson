@@ -1,13 +1,13 @@
 {
 "type": "FeatureCollection",
 "name": "river_segments",
-"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:EPSG::32722" } },
 "features": [
-{ "type": "Feature", "properties": { "segment_id": 0, "lat": -11.129473547470385, "lon": -53.448140208115198 }, "geometry": { "type": "LineString", "coordinates": [ [ -53.451, -11.133 ], [ -53.445280488467013, -11.125947052350071 ] ] } },
-{ "type": "Feature", "properties": { "segment_id": 1, "lat": -11.122420514665603, "lon": -53.442420841028344 }, "geometry": { "type": "LineString", "coordinates": [ [ -53.445280488467013, -11.125947052350071 ], [ -53.439561265772099, -11.118893934443568 ] ] } },
-{ "type": "Feature", "properties": { "segment_id": 2, "lat": -11.115367311710594, "lon": -53.436701762671191 }, "geometry": { "type": "LineString", "coordinates": [ [ -53.439561265772099, -11.118893934443568 ], [ -53.433842331698514, -11.111840646493297 ] ] } },
-{ "type": "Feature", "properties": { "segment_id": 3, "lat": -11.108313938818263, "lon": -53.430982972826982 }, "geometry": { "type": "LineString", "coordinates": [ [ -53.433842331698514, -11.111840646493297 ], [ -53.428123686029494, -11.104787188712068 ] ] } },
-{ "type": "Feature", "properties": { "segment_id": 4, "lat": -11.101260396201345, "lon": -53.425264471278958 }, "geometry": { "type": "LineString", "coordinates": [ [ -53.428123686029494, -11.104787188712068 ], [ -53.422405328548287, -11.097733561312682 ] ] } },
-{ "type": "Feature", "properties": { "segment_id": 5, "lat": -11.096866781935157, "lon": -53.421702662100152 }, "geometry": { "type": "LineString", "coordinates": [ [ -53.422405328548287, -11.097733561312682 ], [ -53.421, -11.096 ] ] } }
+{ "type": "Feature", "properties": { "segment_id": 0, "lat": -11.12947353465592, "lon": -53.443140197872232 }, "geometry": { "type": "LineString", "coordinates": [ [ 232834.452227669709828, 8768213.005657350644469 ], [ 233453.102712737076217, 8768998.671984314918518 ] ] } },
+{ "type": "Feature", "properties": { "segment_id": 1, "lat": -11.122420476310362, "lon": -53.437420810279214 }, "geometry": { "type": "LineString", "coordinates": [ [ 233453.102712737076217, 8768998.671984314918518 ], [ 234071.753197804442607, 8769784.338311279192567 ] ] } },
+{ "type": "Feature", "properties": { "segment_id": 2, "lat": -11.115367247932209, "lon": -53.431701711388918 }, "geometry": { "type": "LineString", "coordinates": [ [ 234071.753197804442607, 8769784.338311279192567 ], [ 234690.403682871779893, 8770570.004638243466616 ] ] } },
+{ "type": "Feature", "properties": { "segment_id": 3, "lat": -11.108313849734298, "lon": -53.425982900984579 }, "geometry": { "type": "LineString", "coordinates": [ [ 234690.403682871779893, 8770570.004638243466616 ], [ 235309.054167939146282, 8771355.67096520960331 ] ] } },
+{ "type": "Feature", "properties": { "segment_id": 4, "lat": -11.101260281929468, "lon": -53.420264378849431 }, "geometry": { "type": "LineString", "coordinates": [ [ 235309.054167939146282, 8771355.67096520960331 ], [ 235927.704653006512672, 8772141.337292173877358 ] ] } },
+{ "type": "Feature", "properties": { "segment_id": 5, "lat": -11.096866718523199, "lon": -53.416702610734077 }, "geometry": { "type": "LineString", "coordinates": [ [ 235927.704653006512672, 8772141.337292173877358 ], [ 236079.735682087950408, 8772334.411836016923189 ] ] } }
 ]
 }

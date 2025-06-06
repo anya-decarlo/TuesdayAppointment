@@ -38,9 +38,18 @@ def define_river_corridor_and_segments():
     """
     print("Step 1: Create the River Centerline (Manual Definition)")
     river_centerline_coords = [
-        (-53.451, -11.133), 
-        (-53.421, -11.096)
+        (-53.446, -11.133), # Shifted eastward
+        (-53.416, -11.096)  # Shifted eastward
     ]
+    # river_centerline_coords = [
+    #     (-53.451, -11.133), 
+    #     (-53.421, -11.096)
+    # ] # Previous attempt for core area
+    # river_centerline_coords = [
+    #     (-53.5, -11.5), 
+    #     (-52.9, -10.9)
+    # ] # Original longer river segment
+
     river_line = LineString(river_centerline_coords)
     river_gdf = gpd.GeoDataFrame({'id': [1], 'geometry': [river_line]}, crs="EPSG:4326")
     print(f"Initial river line length: {river_gdf.geometry.iloc[0].length:.4f} degrees")
@@ -73,7 +82,26 @@ def define_river_corridor_and_segments():
     segments_gdf = segments_gdf[['segment_id', 'geometry', 'lat', 'lon']]
     print("Centroid coordinates (lat/lon) added to each segment.")
 
+    # Ensure the output directory exists
+    # Path is now relative to the script's current location in the main project directory
+    output_dir = "gis_outputs"
+    os.makedirs(output_dir, exist_ok=True)
+
+    # Save the corridor and segments to GeoJSON files
+    corridor_output_path = os.path.join(output_dir, "river_corridor_5km.geojson")
+    segments_output_path = os.path.join(output_dir, "river_segments.geojson")
+
+    try:
+        corridor_gdf.to_file(corridor_output_path, driver="GeoJSON")
+        segments_gdf.to_file(segments_output_path, driver="GeoJSON")
+    except Exception as e:
+        print(f"Error saving GeoJSON files: {e}")
+
+    print(f"Corridor saved to {os.path.abspath(corridor_output_path)}")
+    print(f"Segments saved to {os.path.abspath(segments_output_path)}")
+
     return segments_gdf, corridor_gdf
+
 
 if __name__ == "__main__":
     script_dir = os.path.dirname(os.path.abspath(__file__)) 
